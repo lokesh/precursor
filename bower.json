@@ -1,0 +1,21 @@
+{
+  "name": "precursor",
+  "version": "0.1.0",
+  "homepage": "http://lokeshdhakar.com",
+  "authors": [
+    "Lokesh Dhakar"
+  ],
+  "description": "",
+  "main": "dist/precursor.css",
+  "keywords": [
+    "css",
+  ],
+  "license": "CC BY 2.5",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
