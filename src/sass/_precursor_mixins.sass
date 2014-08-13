@@ -1,6 +1,13 @@
-=baselined-font($font-size)
-  font-size: #{$font-size}px
-  line-height: $font-size/40
+=baselined-font($font-size, $cap-ratio, $bottom-space-ratio)
+  $cap-height: $font-size * $cap-ratio
+  $line-height: ((ceil($font-size/$baseline) * $baseline))
+  $padding-top: ($line-height - $cap-height) * $bottom-space-ratio
+
+  font-size: $font-size
+  line-height: ((ceil($font-size/$baseline) * $baseline))
+  padding-top: $padding-top
+  margin-bottom: ($baseline * 4) - ($padding-top)
+  // line-height: $font-size/40
   // @if $value == antialiased
   //   -webkit-font-smoothing: antialiased
   //   -moz-osx-font-smoothing: grayscale
