@@ -1,13 +1,27 @@
 =baselined-font($font-size, $cap-ratio, $bottom-space-ratio)
   $cap-height: $font-size * $cap-ratio
+  $top-space-ratio: 1 - $cap-ratio - $bottom-space-ratio
+  $top-to-bottom-space-ratio: $top-space-ratio / $bottom-space-ratio
+
+  // TODO: Depending on fontsize, increase line height. Allow some control
+  // of this via an arg.
   $line-height: ((ceil($font-size/$baseline) * $baseline))
-  $padding-top: ($line-height - $cap-height) * $bottom-space-ratio
+  top-space-ratio: $top-space-ratio
+  top-space-height: ($line-height - $cap-height) * $top-space-ratio
+
+  // $padding-top: ((ceil($top-space-height/$baseline) * $baseline))
+
+  // $padding-top: (ceil((($top-space-ratio + $cap-ratio) * $font-size) / $baseline) * $baseline) - (($top-space-ratio + $cap-ratio) * $font-size)
+  
+  // d: $padding-top
+  
+  // $padding-top: (ceil(($bottom-space-ratio * $font-size) / $baseline) * $baseline)
 
   font-size: $font-size
-  line-height: ((ceil($font-size/$baseline) * $baseline))
-  padding-top: $padding-top
-  margin-bottom: ($baseline * 4) - ($padding-top)
-  
+  line-height: $line-height
+  // padding-top: $padding-top
+  // margin-bottom: $margin-bottom * -1
+  // ($baseline * 4) - ($padding-top)
   // line-height: $font-size/40
   // @if $value == antialiased
   //   -webkit-font-smoothing: antialiased

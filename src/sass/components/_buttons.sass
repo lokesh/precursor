@@ -1,8 +1,14 @@
 .button
   display: block
-  // color: white
-  // background: black
-  // border: 0
+  margin-bottom: $baseline * 4
+  color: white
+  background-color: $brand-primary
   font-size: 24px
-  height: $baseline*4
-  padding: $baseline $baseline*4
+  height: $baseline * 6
+  padding: $baseline ($baseline * 4)
+  +border-radius($radius)
+  +transition(background-color 0.2s)
+  &:hover
+    background-color: $brand-primary-light
+    cursor: pointer
+    +transition(background-color 0)
