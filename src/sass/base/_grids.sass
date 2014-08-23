@@ -1,0 +1,36 @@
+.grid-base
+  position: absolute
+  width: 100%
+  height: 100%
+  pointer-events: none
+
+.grid-8
+  @extend .grid-base
+  background-size: 8px 8px
+  +background-image(linear-gradient(transparent 7px, $baseline-grid-color 8px), linear-gradient(left, transparent 7px, $baseline-grid-color 8px))
+
+.grid-16
+  @extend .grid-base
+  background-size: 16px 16px
+  +background-image(linear-gradient(transparent 15px, $baseline-grid-color 16px), linear-gradient(left, transparent 15px, $baseline-grid-color 16px))
+
+.horizontal-grid-8
+  @extend .grid-base
+  background-size: 100% 8px
+  +background-image(linear-gradient(transparent 7px, $baseline-grid-color 8px))
+
+.horizontal-grid-16
+  @extend .grid-base
+  background-size: 100% 16px
+  +background-image(linear-gradient(transparent 15px, $baseline-grid-color 16px))
+
+.vertical-grid-8
+  @extend .grid-base
+  background-size: 8px 100%
+  +background-image(linear-gradient(left, transparent 7px, $baseline-grid-color 8px))
+
+.vertical-grid-16
+  @extend .grid-base
+  background-size: 16px 100% 
+  +background-image(linear-gradient(left, transparent 15px, $baseline-grid-color 16px))
+

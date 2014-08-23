@@ -1,0 +1,19 @@
+
+*, *:before, *:after
+  +box-sizing("border-box")
+
+html
+  min-height: 100% /* make sure it is at least as tall as the viewport */
+  position: relative
+
+body
+  height: 100% /* force the BODY element to match the height of the HTML element */
+  margin: 0
+
+.page
+  padding: $baseline * 8
+
+.col
+  float: left
+  width: 520px
+  margin-right: $baseline * 8

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'src/sass',
           cssDir: 'dist/css',
-          environment: 'production'
+          environment: 'development'
         }
       }
     },
@@ -50,10 +50,10 @@ module.exports = function(grunt) {
     // },   
     watch: {
       sass: {
-        files: ['src/sass/*.sass'],
+        files: ['src/sass/**/*.sass'],
         tasks: ['compass'],
         options: {
-          livereload: true,
+          livereload: false,
           spawn: false
         },
       },
