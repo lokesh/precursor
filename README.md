@@ -9,4 +9,4 @@ impact?
 - Is it feasible?
 - Is it practical?
 
-![Baseline grid work in progress](https://raw.github.com/lokesh/percursor/master/examples/img/baseline_grid_visible.png)
+![Baseline grid work in progress](https://raw.githubusercontent.com/lokesh/precursor/master/examples/img/baseline_grid_visible.png)
